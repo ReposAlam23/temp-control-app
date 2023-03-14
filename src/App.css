@@ -1,38 +1,55 @@
-.App {
-  text-align: center;
+body{
+  background-color: #8f8d8d;
+  display: flex;
+  justify-content: center; 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container{
+  background-color: rgb(19, 104, 85);
+  width: 30vw;
+  border-radius: 3rem;
+  box-shadow: 2px 2px 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.row{
+  margin: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.circle{
+  width: 20vw;
+  height: 35vh;
+  border-radius: 60%;
+  border: 5px solid white;
+  margin-top: 5vh;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  padding: 5%;
+  font-size: 60px;
   color: white;
+  font-weight: 700;
+  box-shadow: 2px 2px 20px;
 }
-
-.App-link {
-  color: #61dafb;
+.button-holder{
+  display: flex;
+  justify-content: center;
+  margin: 5%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.plus, .minus{
+  padding: 5%;
+  margin: 8%;
+  border-radius: 50%;
+  width: 5vw;
+  background-color: #7a7878;
+  border: none;
+  font-size: 50px;
+  font-weight: 900;
+  box-shadow: 5px 5px 50px;
+}
+.plus:hover, .minus:hover{
+  background-color:rgb(194, 235, 226);
+  transition: 0.5s;
+  cursor: pointer;
 }

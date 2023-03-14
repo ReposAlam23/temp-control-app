@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import "./App.css"
 
 function App() {
+  const [display, setDisplay] = useState("20")
+  
+  const handlePlus=()=>{
+    if(display==45) return display
+    setDisplay(()=>parseInt(display)+1)
+  }
+  const handleMinus=()=>{
+    if(display ==0) return display
+    setDisplay(()=>parseInt(display)-1)
+  }
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+        <div className="row">
+          <div className='circle' style={{background:`rgb(${display*10}, ${display*5}, 0)`}}>{display} &deg;C</div>
+        </div>
+        <div className='button-holder'>
+          <button className='plus' onClick={handlePlus}>+</button>
+          <button className='minus' onClick={handleMinus}>-</button>
+        </div>
     </div>
   );
 }
